@@ -1,0 +1,215 @@
+@charset "UTF-8";
+@import url("./nullstyle.css");
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: #25252A;
+    letter-spacing: 2px;
+}
+
+.container {
+    display: grid;
+    width: 100vw;
+    height: 80vh;
+    place-content: center;
+}
+
+.circle {
+    position: relative;
+    border: 4px solid rgb(219, 163, 58);
+    padding: 0;
+    margin: 1em auto;
+    width: 35em;
+    height: 35em;
+    border-radius: 50%;
+    list-style: none;
+    overflow: hidden;
+}
+
+li {
+    overflow: hidden;
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 50%;
+    height: 50%;
+    transform-origin: 0% 100%;
+    border: 1px solid rgb(78, 51, 0);
+    color: white;
+}
+
+.text {
+    position: absolute;
+    left: -100%;
+    width: 200%;
+    height: 200%;
+    text-align: center;
+    transform: skewY(60deg) rotate(15deg);
+    padding-top: 20px;
+}
+
+.hide {
+    display: none;
+}
+
+@media (min-width: 280px) and (max-width: 1920px) {
+    h2 {
+        font-size: calc(23px + (54 - 23) * ( (100vw - 280px) / ( 1920 - 280)));
+    }
+    header div {
+        font-size: calc(8px + (20 - 8) * ( (100vw - 280px) / ( 1920 - 280)));
+    }
+    li {
+        font-size: calc(10px + (20 - 10) * ( (100vw - 280px) / ( 1920 - 280)));
+    }
+    .start-btn {
+        font-size: calc(18px + (24 - 18) * ( (100vw - 280px) / ( 1920 - 280)));
+    }
+    .all,
+    .eats,
+    .not-enought,
+    .dropbtn {
+        border-radius: calc(3px + (25 - 3) * ( (100vw - 280px) / ( 1920 - 280)));
+    }
+    .circle {
+        height: calc(350px + (500 - 350) * ( (100vw - 280px) / ( 1920 - 280)));
+        width: calc(350px + (500 - 350) * ( (100vw - 280px) / ( 1920 - 280)));
+    }
+}
+
+h2 {
+    color: white;
+    font-family: 'Supermercado One', cursive;
+    text-align: center;
+}
+
+header {
+    color: white;
+    display: grid;
+    grid-template-columns: 33vw 33vw 33vw;
+    grid-auto-rows: 5vh;
+    grid-row-gap: 1em;
+    grid-column-gap: 0.5vw;
+}
+
+.all,
+.eats,
+.not-enought {
+    background-color: rgb(143, 27, 252);
+    margin-top: 1vh;
+    cursor: pointer;
+}
+
+.all p,
+.eats p,
+.not-enought p {
+    width: 100%;
+    height: 100%;
+    display: grid;
+    place-content: center;
+}
+
+.dropbtn:hover,
+.dropbtn:focus {
+    background-color: rgb(90, 21, 155);
+}
+
+.dropbtn,
+li {
+    transition: ease-in background-color 0.2s;
+    outline: none;
+}
+
+li:hover {
+    background-color: rgb(255, 242, 57);
+    border: 4px solid rgb(255, 166, 0);
+    color: black;
+}
+
+.all,
+.eats,
+.not-enought {
+    position: relative;
+    display: inline-block;
+}
+
+.all {
+    margin-left: 2vh;
+}
+
+.not-enought {
+    margin-right: 2vh;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #8d31a0;
+    width: 100%;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+    max-height: 50vh;
+    overflow-y: scroll;
+    scroll-behavior: auto;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 7px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: rgb(182, 250, 55);
+    border-radius: 7px;
+}
+
+.dropdown-content p:hover {
+    background-color: #682475;
+}
+
+.dropdown-content p {
+    color: white;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    cursor: default;
+}
+
+.show {
+    margin-top: 1vh;
+    display: block;
+}
+
+.wrap {
+    display: block;
+}
+
+.start_button {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    text-align: center;
+    min-height: 100vh;
+}
+
+.start-btn {
+    width: 30vw;
+    height: 10vh;
+    border: none;
+    color: white;
+    background-color: rgb(255, 0, 68);
+    border-radius: 4px;
+    box-shadow: inset 0 0 0 0 #f9e506;
+    transition: ease-out 0.3s;
+    outline: none;
+}
+
+li {
+    transition: ease-in 0.3s;
+    outline: none;
+}
+
+.start-btn:hover {
+    box-shadow: inset 30vw 0 0 0 #f9e506;
+    color: #000;
+}
