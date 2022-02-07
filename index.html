@@ -15,42 +15,43 @@
 
 <body>
 
-    <h2 class="top">SHARING A PIZZA FOR A PARTY</h2>
-    <div id="wrap" class="hide">
-        <header>
-            <div class="all" onclick="showParticipants(event)">
-                <p class="dropbtn">All the party participants</p>
-                <div id="drop-all" class="dropdown-content">
-                </div>
+<h2 class="top">SHARING A PIZZA FOR A PARTY</h2>
+<div id="wrap" class="hide">
+    <header>
+        <div class="all" onclick="showParticipants(event)">
+            <p class="dropbtn">All the party participants</p>
+            <div id="drop-all" class="dropdown-content">
             </div>
-            <div class="eats" onclick="showParticipants(event)">
-                <p class="dropbtn">Eating pizza</p>
-                <div id="eats-drop" class="dropdown-content">
-                </div>
-            </div>
-            <div class="not-enought" onclick="showParticipants(event)">
-                <p class="dropbtn">Not enough pizza</p>
-                <div id="not-enought-drop" class="dropdown-content">
-                </div>
-            </div>
-        </header>
-    </div>
-
-    <div class="container">
-        <div class="start_button">
-            <button class="start-btn" type="button" onclick="beginningParty()">CLICK FOR STARTING PARTY</button>
         </div>
-        <ul id="circle" class="hide">
-        </ul>
-        <br>
-    </div>
+        <div class="eats" onclick="showParticipants(event)">
+            <p class="dropbtn">Eating pizza</p>
+            <div id="eats-drop" class="dropdown-content">
+            </div>
+        </div>
+        <div class="not-enought" onclick="showParticipants(event)">
+            <p class="dropbtn">Not enough pizza</p>
+            <div id="not-enought-drop" class="dropdown-content">
+            </div>
+        </div>
+    </header>
+</div>
 
-    <div class="decription">
-        <h2 id="decription" class="start">
-            DESIGNED BY VLAD YUSKOVICH
-        </h2>
+<div class="container">
+
+    <div class="start_button">
+        <button id="start-btn" class="start-btn" type="button">CLICK FOR STARTING PARTY</button>
     </div>
-    <script src="./js/script.js"></script>
+    <ul id="circle" class="hide">
+    </ul>
+    <br>
+</div>
+
+<div class="description">
+    <h2 id="description" class="first-text">
+        DESIGNED BY VLAD YUSKOVICH
+    </h2>
+</div>
+<script src="./js/script.js"></script>
 </body>
 
 </html>

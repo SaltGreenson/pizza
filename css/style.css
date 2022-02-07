@@ -1,5 +1,6 @@
 @charset "UTF-8";
 @import url("./nullstyle.css");
+
 body {
     font-family: 'Ubuntu', sans-serif;
     background-color: #25252A;
@@ -53,26 +54,37 @@ li {
 
 @media (min-width: 280px) and (max-width: 1920px) {
     h2 {
-        font-size: calc(23px + (54 - 23) * ( (100vw - 280px) / ( 1920 - 280)));
+        font-size: calc(23px + (54 - 23) * ((100vw - 280px) / (1920 - 280)));
     }
+
     header div {
-        font-size: calc(8px + (20 - 8) * ( (100vw - 280px) / ( 1920 - 280)));
+        font-size: calc(8px + (20 - 8) * ((100vw - 280px) / (1920 - 280)));
     }
+
     li {
-        font-size: calc(10px + (20 - 10) * ( (100vw - 280px) / ( 1920 - 280)));
+        font-size: calc(10px + (20 - 10) * ((100vw - 280px) / (1920 - 280)));
     }
+
     .start-btn {
-        font-size: calc(18px + (24 - 18) * ( (100vw - 280px) / ( 1920 - 280)));
+        font-size: calc(12px + (24 - 12) * ((100vw - 280px) / (1920 - 280)));
     }
+
+    .all p,
+    .eats p,
+    .not-enought p {
+        font-size: calc(7px + (24 - 7) * ((100vw - 280px) / (1920 - 280)));
+    }
+
     .all,
     .eats,
     .not-enought,
     .dropbtn {
-        border-radius: calc(3px + (25 - 3) * ( (100vw - 280px) / ( 1920 - 280)));
+        border-radius: calc(3px + (25 - 3) * ((100vw - 280px) / (1920 - 280)));
     }
+
     .circle {
-        height: calc(350px + (500 - 350) * ( (100vw - 280px) / ( 1920 - 280)));
-        width: calc(350px + (500 - 350) * ( (100vw - 280px) / ( 1920 - 280)));
+        height: calc(280px + (500 - 280) * ((100vw - 280px) / (1920 - 280)));
+        width: calc(280px + (500 - 280) * ((100vw - 280px) / (1920 - 280)));
     }
 }
 
@@ -152,16 +164,6 @@ li:hover {
     scroll-behavior: auto;
 }
 
-.dropdown-content::-webkit-scrollbar {
-    width: 6px;
-    border-radius: 7px;
-}
-
-.dropdown-content::-webkit-scrollbar-thumb {
-    background: rgb(182, 250, 55);
-    border-radius: 7px;
-}
-
 .dropdown-content p:hover {
     background-color: #682475;
 }
@@ -177,6 +179,16 @@ li:hover {
 .show {
     margin-top: 1vh;
     display: block;
+}
+
+.dropdown-content::-webkit-scrollbar {
+    width: 6px;
+    border-radius: 7px;
+}
+
+.dropdown-content::-webkit-scrollbar-thumb {
+    background: rgb(182, 250, 55);
+    border-radius: 7px;
 }
 
 .wrap {
@@ -212,4 +224,9 @@ li {
 .start-btn:hover {
     box-shadow: inset 30vw 0 0 0 #f9e506;
     color: #000;
+}
+
+.first-text {
+    font-size: 24px;
+    color: #858585;
 }

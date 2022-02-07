@@ -65,9 +65,9 @@ const createPizza = (eatingPizza) => {
         collectList([{ name: "Everyone had enough pizza" }], "not-enought-drop")
     }
 
-    const description = document.getElementById("decription")
-    description.classList.remove("start")
-    description.classList.add("decription")
+    const description = document.getElementById("description")
+    description.classList.remove("first-text")
+    description.classList.add("description")
     description.innerText = `THE PIZZA WAS DIVIDED INTO ${eatingPizza.length <= 12? eatingPizza.length : 12} PARTS`
 }
 
@@ -92,3 +92,11 @@ window.onclick = (event) => {
         }
     }
 }
+
+const ready = () => {
+    document.getElementById("start-btn").addEventListener('click', beginningParty)
+}
+document.addEventListener("DOMContentLoaded", (event) => {
+    console.log("DOM полностью загружен и разобран");
+    ready()
+})
